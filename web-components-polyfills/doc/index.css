@@ -1,0 +1,79 @@
+/* general ====================[ */
+html {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    color: rgb(51,51,51);
+}
+body {
+    width: 800px;
+    margin: 3rem auto;
+}
+p, pre, ul, ol {
+    margin: 1em 0;
+}
+pre, code {
+    font-family: "Source Code Pro", Menlo, Consolas, monospace;
+}
+pre {
+    white-space: pre-wrap;
+    border-left: 0.6em solid rgb(224,224,224);
+    padding: 0.25em 1em;
+    font-size: 0.93rem;
+}
+p code:not(.syntax) {
+    border: 0.2em solid rgb(224,224,224);
+    padding: 0.1em 0.2em;
+    color: rgb(51,111,160);
+    border-radius: 0.4em;
+    font-size: 0.9rem;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 0.15rem solid rgb(224,224,224);
+}
+h2 {
+    border-bottom: 0.1rem solid rgb(224,224,224);
+}
+h3 {
+    font-size: 1rem;
+}
+/* ]==================== */
+a {
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table td {
+    padding: 0;
+}
+body > ol {
+    padding-left: 1.5rem;
+}
+body > ol > li {
+    font-size: 1.7rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+body > ol > li > ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+}
+body > ol > li > ul > li {
+    font-size: 1.3rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+body > ol > li > div, body > ol > li > ul > li > div {
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+body > ol > li > ul > li ul {
+    list-style-type: circle;
+}
