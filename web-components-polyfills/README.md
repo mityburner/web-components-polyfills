@@ -118,9 +118,17 @@ The Custom Elements specification is still under discussion. The polyfill implem
 
 ## Building
 
+    git clone https://github.com/Polymer/platform-dev.git platform
+    git clone https://github.com/Polymer/ShadowDOM.git ShadowDOM
+    git clone https://github.com/Polymer/URL.git URL
+    git clone https://github.com/Polymer/HTMLImports.git HTMLImports
     git clone https://github.com/Polymer/CustomElements.git CustomElements
     git clone https://github.com/Polymer/MutationObservers.git MutationObservers
     git clone https://github.com/Polymer/WeakMap.git WeakMap
+    git clone https://github.com/Polymer/observe-js.git observe-js
+
+    cd doc/lib
+    git clone git://github.com/mathjax/MathJax.git MathJax
 
     npm install
     grunt

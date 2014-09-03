@@ -2,22 +2,14 @@ var http= require('http');
 var cgi = require('ngi');
 var fs  = require('fs');
 
-var id_url = {
-    js: {
-        'x-md': 'doc/tag/x-md.js'
-    },
-    css: {
-        'x-md': 'doc/tag/x-md.css'
-    }
-};
-
-function get_url(id, id_url) {
-    var urls = [];
+function getFiles(id, ext) {
+    var files = [];
     for(var i in id) {
-        var url = id_url[id[i]];
-        url && urls.push(url);
+        var file = 'doc/tag/' + id[i] + ext;
+        var stats = fs.statSync(file);
+        stats && stats.isFile() && files.push(file);
     }
-    return urls;
+    return files;
 }
 
 function concat(files, res) {
@@ -34,13 +26,13 @@ function concat(files, res) {
 
 var map = {
     bin : {
-        '/components.js': function(req, res) {
+        '/x-tags.js': function(req, res) {
             res.writeHead(200, {'Content-Type': 'text/javascript'});
-            concat(get_url(req.body.id.split(','), id_url.js), res);
+            concat(getFiles(req.body.id.split(','), '.js'), res);
         },
-        '/components.css': function(req, res) {
+        '/x-tags.css': function(req, res) {
             res.writeHead(200, {'Content-Type': 'text/css'});
-            concat(get_url(req.body.id.split(','), id_url.css), res);
+            concat(getFiles(req.body.id.split(','), '.css'), res);
         }
     },
     exp : {

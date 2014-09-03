@@ -47,6 +47,10 @@
     }
 
     function require(deps, definition) {
+        if(!definition) {
+            definition = deps;
+            deps = [];
+        }
         if(!deps.length) definition();
         else {
             var values = [], count = 0;
