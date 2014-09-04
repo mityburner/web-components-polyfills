@@ -127,8 +127,7 @@ The Custom Elements specification is still under discussion. The polyfill implem
     git clone https://github.com/Polymer/WeakMap.git WeakMap
     git clone https://github.com/Polymer/observe-js.git observe-js
 
-    cd doc/lib
-    git clone git://github.com/mathjax/MathJax.git MathJax
+    git clone git://github.com/mathjax/MathJax.git doc/lib/MathJax
 
     npm install
     grunt
